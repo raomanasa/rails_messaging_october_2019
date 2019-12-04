@@ -1,7 +1,7 @@
-Then("I fill in {string} with {string}") do |input, content|  
-  fill_in input, with: content 
+And("I click on {string}") do |element|
+    click_on element
 end
 
-Then("I click {string}") do |element|
- click_on element
+When("I fill in {string} with {string}") do |input, content|
+    fill_in input, with: content
 end
