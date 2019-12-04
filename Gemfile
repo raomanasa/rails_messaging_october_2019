@@ -20,6 +20,9 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  
 end
 
 group :production do
