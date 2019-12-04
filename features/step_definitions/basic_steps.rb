@@ -1,11 +1,7 @@
-Then("I fill {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I fill in {string} with {string}") do |input, content|  
+  fill_in input, with: content 
 end
 
-Then("I fill in {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("I click {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I click {string}") do |element|
+ click_on element
 end

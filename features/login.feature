@@ -11,7 +11,7 @@ Feature: Login to mailbox
             | user | user@user.com | password |
 
     Scenario: Successfully log in to mailbox
-        Then I fill "Email" with "user@user.com"
+        Then I fill in "Email" with "user@user.com"
         And I fill in "Password" with "password"
         And I click "Log in"
         And I should see "Signed in successfully."
