@@ -6,7 +6,6 @@ Feature: User can create account
     Background:
         Given I am on the landing page
         And I click on "Sign up"
-        Then I should be on the Sign up page
 
     Scenario: Successfully creates an account
         When I fill in "Name" with "Bob"
