@@ -5,6 +5,7 @@ Feature: Login to mailbox
 
     Background:
         Given I am on the Login page
+        Then I should see "Log in"
         And the following user exists
             | name | email         | password |
             | user | user@user.com | password |
