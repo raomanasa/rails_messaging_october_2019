@@ -11,3 +11,10 @@ Given("the following user exist:") do |table|
     create(:user, hash)
   end
 end
+
+  Given("the inbox has content") do
+      sender = User.find(1)
+      receiver = User.find(2)
+      sender.send_message(receiver, "For ever yours", "To dear dmypip")
+    end
+
