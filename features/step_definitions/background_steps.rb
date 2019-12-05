@@ -7,7 +7,7 @@ Given("I am on the landing page") do
 end
 
 Given ("I go to the sent page") do
-  visit mailbox_sent
+  visit mailbox_sent_path
 end
   
 Given("the following user exist:") do |table|
