@@ -10,7 +10,7 @@ Feature: User can empty inbox
       | dummy1 | user1@mail.com | password | 1  |
       | dummy2 | user2@mail.com | password | 2  |
 
-    Given the inbox has content
+    And the inbox has content
     And I am logged in as "dummy2"
 
   Scenario: Moves received message to trash
@@ -18,12 +18,12 @@ Feature: User can empty inbox
     And I click on "View"
     And I click on "Move to trash"
     And I click on "Trash"
-    Then I should see "For ever yours"
+    Then I should see "text_text"
 
   Scenario: Moves sent message to trash
     And I go to the sent page
     And I click on "View"
     And I click on "Move to trash"
     And I click on "Trash"
-    Then I should see "For ever yours"
+    Then I should see "text_text"
 
