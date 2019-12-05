@@ -13,7 +13,7 @@ Given("the following user exist:") do |table|
 end
 
 Given("I am on the inbox") do
-visit mailbox_inbox_path
+  visit mailbox_inbox_path
 end
 
 Given("I am logged in as {string}") do |name|

@@ -8,8 +8,8 @@ I need to be able to send a message
             | name   | email          | password  |
             | dmybob | dmybob@bob.bob | bobbobbob |
             | user   |macd@ggy.ggyg   | password  |  
-        Given I am logged in as "dmybob"
-        Given I am on the inbox
+        And I am logged in as "dmybob"
+        And I am on the inbox
         And I click on "Compose"
  
     Scenario: Composing a message and sending it to recipient [Happy path] 
