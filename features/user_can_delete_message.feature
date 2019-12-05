@@ -14,16 +14,16 @@ Feature: User can empty inbox
     And I am logged in as "dummy2"
 
   Scenario: Moves received message to trash
-    Then I am in the inbox
+    When I am in the inbox
     And I click on "View"
     And I click on "Move to trash"
     And I click on "Trash"
-    Then I should see "text_text"
+    Then I should see "For ever yours"
 
   Scenario: Moves sent message to trash
-    And I go to the sent page
+    When I go to the sent page
     And I click on "View"
     And I click on "Move to trash"
     And I click on "Trash"
-    Then I should see "text_text"
+    Then I should see "Til the end of time"
 

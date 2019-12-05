@@ -19,8 +19,8 @@ end
 Given("the inbox has content") do
     user1 = User.find(1)
     user2 = User.find(2)
-    user1.send_message(user2, "text_text", "To dear user2")
-    user2.send_message(user1, "text_text", "To dear user1")
+    user1.send_message(user2, "For ever yours", "To dear user2")
+    user2.send_message(user1, "Til the end of time", "To dear user1")
 end
 
 Given("I am in the inbox") do
