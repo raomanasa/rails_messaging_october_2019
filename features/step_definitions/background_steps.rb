@@ -17,12 +17,13 @@ Given("the following user exist:") do |table|
 end
 
 Given("the inbox has content") do
-    sender = User.find(1)
-    receiver = User.find(2)
-    sender.send_message(receiver, "For ever yours", "To dear dmypip")
+    user1 = User.find(1)
+    user2 = User.find(2)
+    user1.send_message(user2, "For ever yours", "To dear user2")
+    user2.send_message(user1, "For ever yours", "To dear user1")
 end
 
-Given("I am on the inbox") do
+Given("I am in the inbox") do
   visit mailbox_inbox_path
 end
 

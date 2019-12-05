@@ -6,30 +6,24 @@ Feature: User can empty inbox
   Background:
     Given the following user exist:
 
-      | name   | email          | password  | id |
-      | dmybob | dmybob@bob.bob | bobbobbob | 1  |
-      | dmypip | dmypip@bob.bob | pippippip | 2  |
+      | name   | email          | password | id |
+      | dummy1 | user1@mail.com | password | 1  |
+      | dummy2 | user2@mail.com | password | 2  |
 
     Given the inbox has content
-    And I am on the Login page
+    And I am logged in as "dummy2"
 
   Scenario: Moves received message to trash
-    Then I fill in "Email" with "dmypip@bob.bob"
-    And I fill in "Password" with "pippippip"
-    And I click on "Log in"
-    And I click on "Inbox"
+    Then I am in the inbox
     And I click on "View"
-    Then I click on "Move to trash"
+    And I click on "Move to trash"
     And I click on "Trash"
     Then I should see "For ever yours"
 
   Scenario: Moves sent message to trash
-    Then I fill in "Email" with "dmybob@bob.bob"
-    And I fill in "Password" with "bobbobbob"
-    And I click on "Log in"
     And I go to the sent page
     And I click on "View"
-    Then I click on "Move to trash"
+    And I click on "Move to trash"
     And I click on "Trash"
     Then I should see "For ever yours"
 
