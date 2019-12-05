@@ -22,5 +22,11 @@ Given("the inbox has content") do
     sender.send_message(receiver, "For ever yours", "To dear dmypip")
 end
 
+Given("I am on the inbox") do
+  visit mailbox_inbox_path
+end
 
-
+Given("I am logged in as {string}") do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
+end
