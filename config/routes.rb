@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   root 'welcome#index'
+  
 
   # mailbox folder routes
   get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
