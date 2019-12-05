@@ -9,5 +9,14 @@ end
 Given("the following user exist:") do |table|
   table.hashes.each do |hash|
     create(:user, hash)
-  end
+  end 
+end
+
+Given("I am on the inbox") do
+  visit mailbox_inbox_path
+end
+
+Given("I am logged in as {string}") do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
 end

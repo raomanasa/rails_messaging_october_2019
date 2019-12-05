@@ -81,3 +81,5 @@ Feature: User can create account
         And I fill in "Password confirmation" with "bobbobbob"
         And I click on "Create"
         Then I should see "Name has already been taken"
+
+        
