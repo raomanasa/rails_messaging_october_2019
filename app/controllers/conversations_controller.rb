@@ -6,9 +6,14 @@ class ConversationsController < ApplicationController
 
   def create
     recipients = User.where(id: conversation_params[:recipients])
-    conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
-    flash[:success] = 'Your message was successfully sent!'
-    redirect_to conversation_path(conversation)
+  if (conversation_params[:subject] == "") || (conversation_params[:body] == "") || (recipients == [])
+      redirect_to request.referer
+      flash[:alert] = 'Missing subject or message content!'
+    else
+      conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
+      flash[:success] = 'Your message was successfully sent!'
+      redirect_to conversation_path(conversation)
+    end
   end
 
   def show
