@@ -4,16 +4,11 @@ In order to communicate with my contacts
 I need to be able to send a message
 
     Background:
-        Given I am on the Login page
         Given the following user exist:
             | name   | email          | password  |
             | dmybob | dmybob@bob.bob | bobbobbob |
             | user   |macd@ggy.ggyg   | password  |  
-        
-        When I fill in "Email" with "dmybob@bob.bob"
-        And I fill in "Password" with "bobbobbob"
-        And I click on "Log in"
-        Then I should see "Signed in successfully."
+        Given I am logged in as "dmybob"
         Given I am on the inbox
         And I click on "Compose"
  

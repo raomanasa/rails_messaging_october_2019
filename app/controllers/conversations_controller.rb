@@ -6,7 +6,7 @@ class ConversationsController < ApplicationController
 
   def create
     recipients = User.where(id: conversation_params[:recipients])
-  if (conversation_params[:subject] == "") || (conversation_params[:body] == "") || (recipients == [])
+  if conversation_params[:subject].empty? || conversation_params[:body].empty? || recipients.empty?
       redirect_to request.referer
       flash[:alert] = 'Messages must have a recipient, subject and message!'
     else
