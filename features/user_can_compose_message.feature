@@ -28,16 +28,16 @@ I need to be able to send a message
         When I Choose "Recipient" with "user"
         And I fill in "Type your message here" with "parrot is a bird"
         And I click on "Send Message"
-        Then I should see "Missing subject or message content!"
+        Then I should see "Messages must have a recipient, subject and message!"
     
     Scenario: Composing a message without a message [Sad path] 
         When I Choose "Recipient" with "user"
         And I fill in "Subject" with "bird"
         And I click on "Send Message"
-        Then I should see "Missing subject or message content!"
+        Then I should see "Messages must have a recipient, subject and message!"
     
     Scenario: Composing a message without selecting a recipient [Sad path] 
         When I fill in "Subject" with "bird"
         And I fill in "Type your message here" with "parrot is a bird"
         And I click on "Send Message"
-        Then I should see "Missing subject or message content!"
+        Then I should see "Messages must have a recipient, subject and message!"

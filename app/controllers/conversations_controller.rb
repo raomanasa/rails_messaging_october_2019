@@ -8,7 +8,7 @@ class ConversationsController < ApplicationController
     recipients = User.where(id: conversation_params[:recipients])
   if (conversation_params[:subject] == "") || (conversation_params[:body] == "") || (recipients == [])
       redirect_to request.referer
-      flash[:alert] = 'Missing subject or message content!'
+      flash[:alert] = 'Messages must have a recipient, subject and message!'
     else
       conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
       flash[:success] = 'Your message was successfully sent!'
