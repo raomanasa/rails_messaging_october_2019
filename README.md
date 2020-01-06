@@ -1,7 +1,7 @@
 # Rails_messaging
 ## The code
 
-It is a publishing software.
+It is a software to send  and recieve messages.
 
 ## Setup-
 Git Address
